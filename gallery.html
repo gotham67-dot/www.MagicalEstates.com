@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Magical Estate — Gallery</title>
+
+  <!-- Keep your global homepage stylesheet (unchanged) -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Gallery-specific stylesheet -->
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body class="gallery-page">
+
+  <!-- Header (same as homepage) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Magical Estate home">
+        <span class="logo-mark">🏡</span>
+        <span class="logo-type">Magical<span>Estate</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <ul class="tabs">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="branches.html">Branches</a></li>
+          <li><a class="active" href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero small">
+      <div class="container center">
+        <h1 class="section-title">Gallery — Photos & Videos</h1>
+        <p class="lead">Curated photos and walkthrough videos of our properties. Click a card to preview full media and details.</p>
+      </div>
+    </section>
+
+    <!-- Gallery grid -->
+    <section class="container gallery-section" aria-labelledby="gallery-title">
+      <h2 id="gallery-title" class="section-title">Mixed-media Showcase</h2>
+
+      <div class="gallery-grid" role="list">
+
+        <!-- Row 1: Featured large -->
+        <article class="gallery-card featured" role="listitem" tabindex="0"
+                 data-type="image"
+                 data-src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2000"
+                 data-title="Hillcrest Mansion"
+                 data-desc="Grand mansion with gardens, private pool and fitness suite."
+                 data-price="KSh 120,000,000"
+                 data-features="6 beds • 7 baths • Pool • Gym • SQ">
+          <div class="thumb">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1200" alt="Hillcrest Mansion exterior">
+          </div>
+          <div class="card-meta">
+            <h3>Hillcrest Mansion</h3>
+            <small class="meta-line">KSh 120,000,000 • 6 beds</small>
+          </div>
+        </article>
+
+        <!-- Row 1: Wide video (Lakeside Villa) - integrated YouTube embed src -->
+        <article class="gallery-card wide video" role="listitem" tabindex="0"
+                 data-type="video"
+                 data-src="https://www.youtube.com/embed/LX4s_M3yeWo?si=0ZsEWmGtIWkoHc-k"
+                 data-poster="https://images.unsplash.com/photo-1505691723518-36a0d6eb0f13?q=80&w=1200"
+                 data-title="Lakeside Villa — Walkthrough"
+                 data-desc="Drone & interior walkthrough of infinity pool and interiors."
+                 data-price="KSh 85,000,000"
+                 data-features="5 beds • 5 baths • Infinity pool">
+          <div class="thumb">
+            <img loading="lazy" src="images/14.jpg" alt="Lakeside Villa thumbnail">
+            <div class="play-icon" aria-hidden="true">▶</div>
+          </div>
+          <div class="card-meta">
+            <h3>Lakeside Villa (video)</h3>
+            <small class="meta-line">KSh 85,000,000 • 5 beds</small>
+          </div>
+        </article>
+
+        <!-- Row 1: Regular -->
+        <article class="gallery-card" role="listitem" tabindex="0"
+                 data-type="image"
+                 data-src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2000"
+                 data-title="Oakridge Townhome"
+                 data-desc="Family-friendly townhouse with shared amenities."
+                 data-price="KSh 45,000,000"
+                 data-features="4 beds • 4 baths">
+          <div class="thumb">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1200" alt="Oakridge Townhome">
+          </div>
+          <div class="card-meta">
+            <h3>Oakridge Townhome</h3>
+            <small class="meta-line">KSh 45,000,000 • 4 beds</small>
+          </div>
+        </article>
+
+        <!-- Row 2: Tall -->
+        <article class="gallery-card tall" role="listitem" tabindex="0"
+                 data-type="image"
+                 data-src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=80&w=2000"
+                 data-title="Nakuru Family Home"
+                 data-desc="Comfortable family home with landscaped gardens."
+                 data-price="KSh 18,000,000"
+                 data-features="4 beds • 3 baths">
+          <div class="thumb">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=80&w=1200" alt="Nakuru Family Home">
+          </div>
+          <div class="card-meta">
+            <h3>Nakuru Family Home</h3>
+            <small class="meta-line">KSh 18,000,000 • 4 beds</small>
+          </div>
+        </article>
+
+        <!-- Row 2: Small video (Harborview Apartment) - integrated YouTube embed src -->
+        <article class="gallery-card" role="listitem" tabindex="0"
+                 data-type="video"
+                 data-src="https://www.youtube.com/embed/_BT6GjLdbXg?si=rxQMpN8OTBEaKHeQ"
+                 data-poster="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=1200"
+                 data-title="Harborview Apartment — Walkthrough"
+                 data-desc="Modern 3-bed apartment with waterfront balcony."
+                 data-price="KSh 18,000,000"
+                 data-features="3 beds • 2 baths">
+          <div class="thumb">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=1200" alt="Harborview Apartment">
+            <div class="play-icon" aria-hidden="true">▶</div>
+          </div>
+          <div class="card-meta">
+            <h3>Harborview Apt (video)</h3>
+            <small class="meta-line">KSh 18,000,000 • 3 beds</small>
+          </div>
+        </article>
+
+        <!-- Row 3: Image -->
+        <article class="gallery-card" role="listitem" tabindex="0"
+                 data-type="image"
+                 data-src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2000"
+                 data-title="Coastal Bungalow"
+                 data-desc="Coastal bungalow with direct beach access."
+                 data-price="KSh 32,000,000"
+                 data-features="3 beds • 2 baths">
+          <div class="thumb">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200" alt="Coastal Bungalow">
+          </div>
+          <div class="card-meta">
+            <h3>Coastal Bungalow</h3>
+            <small class="meta-line">KSh 32,000,000 • 3 beds</small>
+          </div>
+        </article>
+
+        <!-- Row 3: Image -->
+        <article class="gallery-card" role="listitem" tabindex="0"
+                 data-type="image"
+                 data-src="https://images.unsplash.com/photo-1560185127-6b1f3f0beaf7?q=80&w=2000"
+                 data-title="Skyline Penthouse"
+                 data-desc="Top-floor penthouse with panoramic city views."
+                 data-price="KSh 250,000,000"
+                 data-features="5 beds • 6 baths">
+          <div class="thumb">
+            <img loading="lazy" src="images/5.jpg" alt="Skyline Penthouse">
+          </div>
+          <div class="card-meta">
+            <h3>Skyline Penthouse</h3>
+            <small class="meta-line">KSh 250,000,000 • 5 beds</small>
+          </div>
+        </article>
+
+        <!-- Row 4: Video (Garden Estate) - integrated YouTube embed src -->
+        <article class="gallery-card wide video" role="listitem" tabindex="0"
+                 data-type="video"
+                 data-src="https://www.youtube.com/embed/R_9-JElwV2A?si=1pKnGILxPZUrU4B1"
+                 data-poster="https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1200"
+                 data-title="Garden Estate — Walkthrough"
+                 data-desc="Suburban estate with landscaped gardens and community pool."
+                 data-price="KSh 68,000,000"
+                 data-features="4 beds • 4 baths">
+          <div class="thumb">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1200" alt="Garden Estate thumbnail">
+            <div class="play-icon" aria-hidden="true">▶</div>
+          </div>
+          <div class="card-meta">
+            <h3>Garden Estate (video)</h3>
+            <small class="meta-line">KSh 68,000,000 • 4 beds</small>
+          </div>
+        </article>
+
+        <!-- Row 4: Country cottage -->
+        <article class="gallery-card" role="listitem" tabindex="0"
+                 data-type="image"
+                 data-src="https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=2000"
+                 data-title="Country Cottage"
+                 data-desc="Cozy cottage with orchard and fireplace."
+                 data-price="KSh 14,500,000"
+                 data-features="2 beds • 1 bath">
+          <div class="thumb">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=1200" alt="Country Cottage">
+          </div>
+          <div class="card-meta">
+            <h3>Country Cottage</h3>
+            <small class="meta-line">KSh 14,500,000 • 2 beds</small>
+          </div>
+        </article>
+
+        <!-- Row 5: Modern loft (video) - integrated YouTube embed src -->
+        <article class="gallery-card" role="listitem" tabindex="0"
+                 data-type="video"
+                 data-src="https://www.youtube.com/embed/ddkxfZtWzDA?si=Hql4NAfIpOWTUhUj"
+                 data-poster="images/15.jpg"
+                 data-title="Modern Loft — Walkthrough"
+                 data-desc="Contemporary loft with open-plan living."
+                 data-price="KSh 12,500,000"
+                 data-features="2 beds • 2 baths">
+          <div class="thumb">
+            <img loading="lazy" src="images/15.jpg" alt="Modern Loft">
+            <div class="play-icon" aria-hidden="true">▶</div>
+          </div>
+          <div class="card-meta">
+            <h3>Modern Loft (video)</h3>
+            <small class="meta-line">KSh 12,500,000 • 2 beds</small>
+          </div>
+        </article>
+
+        <!-- Row 5: Poolside villa -->
+        <article class="gallery-card" role="listitem" tabindex="0"
+                 data-type="image"
+                 data-src="https://images.unsplash.com/photo-1472224371017-08207f84aaae?q=80&w=2000"
+                 data-title="Poolside Villa"
+                 data-desc="Private pool and outdoor entertaining area."
+                 data-price="KSh 95,000,000"
+                 data-features="4 beds • 4 baths • Pool">
+          <div class="thumb">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1472224371017-08207f84aaae?q=80&w=1200" alt="Poolside Villa">
+          </div>
+          <div class="card-meta">
+            <h3>Poolside Villa</h3>
+            <small class="meta-line">KSh 95,000,000 • 4 beds</small>
+          </div>
+        </article>
+
+      </div> <!-- /gallery-grid -->
+    </section>
+  </main>
+
+  <!-- Lightbox modal -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="lightbox-wrap" role="document">
+      <button class="lb-close" aria-label="Close">✕</button>
+      <button class="lb-prev" aria-label="Previous">‹</button>
+      <div class="lb-media" id="lb-media" aria-live="polite"></div>
+      <button class="lb-next" aria-label="Next">›</button>
+
+      <aside class="lb-info" id="lb-info">
+        <h3 id="lb-title"></h3>
+        <p id="lb-desc" class="lb-desc"></p>
+        <div id="lb-meta" class="lb-meta"></div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo" href="index.html">🏡 Magical<span>Estate</span></a>
+        <p style="margin:.6rem 0 0; color:var(--muted);">© <span id="year"></span> Magical Estate</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    // Elements
+    const cards = Array.from(document.querySelectorAll('.gallery-card'));
+    const lightbox = document.getElementById('lightbox');
+    const lbMedia = document.getElementById('lb-media');
+    const lbTitle = document.getElementById('lb-title');
+    const lbDesc = document.getElementById('lb-desc');
+    const lbMeta = document.getElementById('lb-meta');
+    const btnClose = document.querySelector('.lb-close');
+    const btnNext = document.querySelector('.lb-next');
+    const btnPrev = document.querySelector('.lb-prev');
+
+    let currentIndex = -1;
+
+    function openLightbox(index){
+      currentIndex = index;
+      const card = cards[index];
+      const type = (card.dataset.type || 'image').toLowerCase();
+      const src = card.dataset.src || '';
+      const poster = card.dataset.poster || '';
+      const title = card.dataset.title || '';
+      const desc = card.dataset.desc || '';
+      const price = card.dataset.price || '';
+      const features = card.dataset.features || '';
+
+      // clear
+      lbMedia.innerHTML = '';
+      lbTitle.textContent = title;
+      lbDesc.textContent = desc;
+      lbMeta.innerHTML = '';
+      if(price) lbMeta.innerHTML += `<div><strong>Price:</strong> ${price}</div>`;
+      if(features) lbMeta.innerHTML += `<div style="margin-top:8px;"><strong>Features:</strong> ${features}</div>`;
+
+      // Video handling — detect YouTube embed URLs vs native MP4
+      if(type === 'video'){
+        const isYouTube = /youtube\.com\/embed\/|youtube\.com\/watch|youtu\.be\//i.test(src);
+        if(isYouTube){
+          // ensure autoplay flag for quick playback in lightbox
+          const autoplaySrc = src.includes('autoplay=1') ? src : (src + (src.includes('?') ? '&' : '?') + 'autoplay=1');
+          const iframe = document.createElement('iframe');
+          iframe.src = autoplaySrc;
+          iframe.title = title || 'Video';
+          iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+          iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+          iframe.allowFullscreen = true;
+          iframe.style.width = '100%';
+          iframe.style.height = '72vh';
+          iframe.style.border = '0';
+          lbMedia.appendChild(iframe);
+        } else {
+          // native video (mp4)
+          const video = document.createElement('video');
+          video.src = src;
+          if(poster) video.poster = poster;
+          video.controls = true;
+          video.autoplay = true;
+          video.playsInline = true;
+          video.style.maxWidth = '100%';
+          video.style.maxHeight = '72vh';
+          lbMedia.appendChild(video);
+        }
+      } else {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = title;
+        img.style.maxWidth = '100%';
+        img.style.maxHeight = '72vh';
+        lbMedia.appendChild(img);
+      }
+
+      lightbox.style.display = 'flex';
+      lightbox.setAttribute('aria-hidden','false');
+      btnClose.focus();
+      document.addEventListener('keydown', keyHandler);
+    }
+
+    function closeLightbox(){
+      // stop video / iframe
+      const v = lbMedia.querySelector('video');
+      if(v){ v.pause(); v.src = ''; }
+      const iframe = lbMedia.querySelector('iframe');
+      if(iframe){ iframe.src = ''; }
+      lbMedia.innerHTML = '';
+      lightbox.style.display = 'none';
+      lightbox.setAttribute('aria-hidden','true');
+      document.removeEventListener('keydown', keyHandler);
+      if(currentIndex >= 0) cards[currentIndex].focus();
+    }
+
+    function next(){
+      if(currentIndex === -1) return;
+      const nextIndex = (currentIndex + 1) % cards.length;
+      openLightbox(nextIndex);
+    }
+    function prev(){
+      if(currentIndex === -1) return;
+      const prevIndex = (currentIndex - 1 + cards.length) % cards.length;
+      openLightbox(prevIndex);
+    }
+
+    function keyHandler(e){
+      if(e.key === 'Escape') closeLightbox();
+      if(e.key === 'ArrowRight') next();
+      if(e.key === 'ArrowLeft') prev();
+    }
+
+    // Attach events
+    cards.forEach((card, i) => {
+      card.addEventListener('click', () => openLightbox(i));
+      card.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter' || e.key === ' ') { openLightbox(i); e.preventDefault(); }
+      });
+    });
+
+    btnClose.addEventListener('click', closeLightbox);
+    btnNext.addEventListener('click', next);
+    btnPrev.addEventListener('click', prev);
+
+    // click outside content closes
+    lightbox.addEventListener('click', (e) => {
+      if(e.target === lightbox) closeLightbox();
+    });
+
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  })();
+  </script>
+</body>
+</html>

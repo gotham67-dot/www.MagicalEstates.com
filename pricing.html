@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Magical Estate — Pricing</title>
+
+  <!-- Important: keep your global homepage stylesheet (the CSS you pasted) -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Pricing-specific styles (separate file) -->
+  <link rel="stylesheet" href="pricing.css">
+</head>
+
+<body class="pricing-page">
+  <!-- Header (keeps site layout and nav identical to your homepage) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Magical Estate home">
+        <span class="logo-mark">🏡</span>
+        <span class="logo-type">Magical<span>Estate</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <ul class="tabs">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="pricing.html">Pricing</a></li>
+          <li><a href="branches.html">Branches</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero (keeps background/layout static) -->
+    <section class="hero small">
+      <div class="container">
+        <h1 class="section-title center">Clear, transparent pricing</h1>
+        <p class="lead center">Samples below show property type, rooms and features. Sales fee examples are included (2%). The page uses the same site background & color tokens.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <!-- Featured cards (uses site variables) -->
+      <h2 class="section-title">Featured properties</h2>
+
+      <div class="cards-grid">
+        <!-- Mansion -->
+        <article class="card featured">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1600&auto=format&fit=crop" alt="Hillcrest Mansion">
+            <div class="ribbon">Featured</div>
+          </div>
+          <div class="card-body">
+            <span class="badge">Mansion</span>
+            <h3 class="card-title">Hillcrest Mansion</h3>
+            <div class="price">KSh 120,000,000</div>
+            <ul class="card-features">
+              <li><strong>Rooms:</strong> 6 beds • 7 baths</li>
+              <li><strong>Features:</strong> Private pool • Full gym • Servant's quarters (SQ) • 4-car garage • Gardens</li>
+            </ul>
+            <div class="card-footer">
+              <div class="commission">Sales fee: <strong>KSh 2,400,000</strong> (2%)</div>
+              <a class="btn btn-primary" href="contact.html">Book viewing</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Villa -->
+        <article class="card">
+          <div class="card-media">
+            <img src="images/14.jpg" alt="Lakeside Villa">
+          </div>
+          <div class="card-body">
+            <span class="badge">Villa</span>
+            <h3 class="card-title">Lakeside Villa</h3>
+            <div class="price">KSh 85,000,000</div>
+            <ul class="card-features">
+              <li><strong>Rooms:</strong> 5 beds • 5 baths</li>
+              <li><strong>Features:</strong> Infinity pool • Sauna • Private garden • SQ</li>
+            </ul>
+            <div class="card-footer">
+              <div class="commission">Sales fee: <strong>KSh 1,700,000</strong> (2%)</div>
+              <a class="btn btn-primary" href="contact.html">Book viewing</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Townhouse -->
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1600&auto=format&fit=crop" alt="Oakridge Townhome">
+          </div>
+          <div class="card-body">
+            <span class="badge">Townhouse</span>
+            <h3 class="card-title">Oakridge Townhome</h3>
+            <div class="price">KSh 45,000,000</div>
+            <ul class="card-features">
+              <li><strong>Rooms:</strong> 4 beds • 4 baths</li>
+              <li><strong>Features:</strong> Shared pool • Gym • 2-car garage</li>
+            </ul>
+            <div class="card-footer">
+              <div class="commission">Sales fee: <strong>KSh 900,000</strong> (2%)</div>
+              <a class="btn btn-primary" href="contact.html">Book viewing</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Apartment -->
+        <article class="card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=1600&auto=format&fit=crop" alt="Harborview Apartment">
+          </div>
+          <div class="card-body">
+            <span class="badge">Apartment</span>
+            <h3 class="card-title">Harborview Apartment</h3>
+            <div class="price">KSh 18,000,000</div>
+            <ul class="card-features">
+              <li><strong>Rooms:</strong> 3 beds • 2 baths</li>
+              <li><strong>Features:</strong> Gym access • Pool access • Parking • Balcony</li>
+            </ul>
+            <div class="card-footer">
+              <div class="commission">Sales fee: <strong>KSh 360,000</strong> (2%)</div>
+              <a class="btn btn-primary" href="contact.html">Book viewing</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Pricing table: contrasted panel for readability -->
+      <h2 class="section-title" style="margin-top:28px;">Compare sample properties (fees & features)</h2>
+
+      <div class="table-panel" role="region" aria-label="Properties comparison">
+        <table class="pricing-table" role="table" aria-label="Sample properties and fees">
+          <thead>
+            <tr>
+              <th scope="col">Property (type)</th>
+              <th scope="col">Price</th>
+              <th scope="col">Beds</th>
+              <th scope="col">Key features</th>
+              <th scope="col" style="text-align:right;">Sales fee (2%)</th>
+              <th scope="col" style="text-align:right;">Placement (5% ann.)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="prop-cell">
+                <img class="prop-thumb" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800&auto=format&fit=crop" alt="">
+                <div>
+                  <div class="prop-name">Hillcrest Mansion</div>
+                  <div class="prop-type">Mansion</div>
+                </div>
+              </td>
+              <td>KSh 120,000,000</td>
+              <td style="text-align:center;">6</td>
+              <td>Private pool • Gym • SQ • 4-car garage</td>
+              <td style="text-align:right; font-weight:700;">KSh 2,400,000</td>
+              <td style="text-align:right;">—</td>
+            </tr>
+
+            <tr>
+              <td class="prop-cell">
+                <img class="prop-thumb" src="images/14.jpg" alt="">
+                <div>
+                  <div class="prop-name">Lakeside Villa</div>
+                  <div class="prop-type">Villa</div>
+                </div>
+              </td>
+              <td>KSh 85,000,000</td>
+              <td style="text-align:center;">5</td>
+              <td>Infinity pool • Sauna • Private garden • SQ</td>
+              <td style="text-align:right; font-weight:700;">KSh 1,700,000</td>
+              <td style="text-align:right;">—</td>
+            </tr>
+
+            <tr>
+              <td class="prop-cell">
+                <img class="prop-thumb" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800&auto=format&fit=crop" alt="">
+                <div>
+                  <div class="prop-name">Oakridge Townhome</div>
+                  <div class="prop-type">Townhouse</div>
+                </div>
+              </td>
+              <td>KSh 45,000,000</td>
+              <td style="text-align:center;">4</td>
+              <td>Shared pool • Gym • 2-car garage</td>
+              <td style="text-align:right; font-weight:700;">KSh 900,000</td>
+              <td style="text-align:right;">KSh 42,000 (example)</td>
+            </tr>
+
+            <tr>
+              <td class="prop-cell">
+                <img class="prop-thumb" src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=800&auto=format&fit=crop" alt="">
+                <div>
+                  <div class="prop-name">Harborview Apartment</div>
+                  <div class="prop-type">Apartment</div>
+                </div>
+              </td>
+              <td>KSh 18,000,000</td>
+              <td style="text-align:center;">3</td>
+              <td>Gym • Pool access • Parking • Balcony</td>
+              <td style="text-align:right; font-weight:700;">KSh 360,000</td>
+              <td style="text-align:right;">KSh 36,000 (example)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo" href="index.html">🏡 Magical<span>Estate</span></a>
+        <p style="margin:.6rem 0 0; color:var(--muted);">© <span id="year"></span> Magical Estate</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

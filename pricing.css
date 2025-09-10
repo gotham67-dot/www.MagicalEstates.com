@@ -1,0 +1,110 @@
+/* pricing.css
+   Scoped to .pricing-page and using the homepage variables you shared.
+   Save as pricing.css in the same folder as pricing.html
+*/
+
+/* Scope root for local helper vars */
+.pricing-page { --card-radius: 12px; --card-shadow: 0 12px 30px rgba(6,16,40,0.06); }
+
+/* Container */
+.pricing-page .container { width: min(1160px, 92%); margin: 0 auto; }
+
+/* Titles */
+.pricing-page .section-title { margin: 0 0 12px; font-weight: 800; color: var(--text); }
+.pricing-page .lead { color: var(--muted); }
+
+/* Cards grid */
+.pricing-page .cards-grid { display:grid; gap:18px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-top:12px; }
+.pricing-page .card{
+  background: var(--panel);             /* match homepage panel color */
+  border-radius: var(--card-radius);
+  border: 1px solid rgba(20,22,42,0.06);
+  box-shadow: var(--card-shadow);
+  overflow:hidden; display:flex; flex-direction:column;
+}
+.pricing-page .card-media{ position:relative; }
+.pricing-page .card-media img{ width:100%; height:180px; object-fit:cover; display:block; }
+.pricing-page .ribbon{
+  position:absolute; left:12px; top:12px; padding:6px 10px; border-radius:999px;
+  background: linear-gradient(90deg,var(--brand-600), var(--brand-400)); color:#fff; font-weight:700;
+  box-shadow: 0 8px 20px rgba(79,70,229,0.14);
+}
+.pricing-page .card-body{ padding:14px; display:flex; flex-direction:column; gap:.6rem; color:var(--text); }
+.pricing-page .badge{ display:inline-block; padding:6px 9px; border-radius:999px; font-weight:700; color:var(--brand-600); background: rgba(108,99,255,0.06); }
+.pricing-page .card-title{ margin:0; font-size:1.05rem; color:var(--text); }
+.pricing-page .price{ font-weight:800; color:var(--brand-600); }
+.pricing-page .card-features{ margin:0; padding-left:16px; color:var(--muted); }
+
+/* footer area in card */
+.pricing-page .card-footer{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:auto; }
+.pricing-page .commission{ font-weight:700; color:var(--text); }
+
+/* Button */
+.pricing-page .btn{ text-decoration:none; padding:10px 14px; border-radius:10px; font-weight:700; display:inline-flex; align-items:center; gap:.5rem; }
+.pricing-page .btn-primary{ background: linear-gradient(90deg,var(--brand-600),var(--brand-400)); color:#fff; border:none; box-shadow: 0 8px 22px rgba(79,70,229,0.12); }
+
+/* Table panel — distinct surface using your --panel variable (keeps site bg static) */
+.pricing-page .table-panel{
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.94)); /* subtle light sheen */
+  border-radius: 10px;
+  padding: 12px;
+  margin-top: 12px;
+  border: 1px solid rgba(20,22,42,0.04);
+  box-shadow: var(--card-shadow);
+}
+
+/* Table */
+.pricing-page .pricing-table{ width:100%; border-collapse:collapse; min-width:760px; font-size:0.96rem; }
+.pricing-page .pricing-table thead th{
+  background: linear-gradient(90deg,var(--brand-600), var(--brand-400));
+  color: #fff;
+  padding:12px 14px;
+  text-align:left;
+  font-weight:700;
+  position: sticky; top:0; z-index:2;
+}
+.pricing-page .pricing-table tbody td{
+  padding:12px 14px;
+  background: var(--panel);          /* ensure cells contrast with site background */
+  color: var(--text);
+  border-bottom: 1px solid rgba(20,22,42,0.04);
+  vertical-align: middle;
+}
+.pricing-page .pricing-table tbody tr:nth-child(even) td{
+  background: rgba(108,99,255,0.02); /* very subtle tint from brand for striping */
+}
+
+/* prop cell (thumb + meta) */
+.pricing-page .prop-cell{ display:flex; gap:12px; align-items:center; }
+.pricing-page .prop-thumb{ width:88px; height:64px; object-fit:cover; border-radius:8px; }
+.pricing-page .prop-name{ font-weight:700; color:var(--text); }
+.pricing-page .prop-type{ color:var(--muted); font-size:0.86rem; }
+
+/* right alignment helper */
+.pricing-page .pricing-table td[style*="text-align:right"] { text-align:right; }
+
+/* hover polish */
+.pricing-page .pricing-table tbody tr:hover td { background: linear-gradient(90deg,#f6f9ff,#ffffff); }
+
+/* Responsive adjustments */
+@media (max-width:960px){
+  .pricing-page .pricing-table{ min-width:700px; }
+  .pricing-page .prop-thumb{ width:72px; height:52px; }
+}
+@media (max-width:720px){
+  .pricing-page .cards-grid{ grid-template-columns:1fr; }
+  .pricing-page .pricing-table{ min-width:640px; }
+}
+
+/* Dark mode adaptation — uses your homepage dark-mode variables (no background override) */
+@media (prefers-color-scheme: dark){
+  .pricing-page .table-panel{
+    background: linear-gradient(180deg, rgba(20,23,42,0.62), rgba(8,12,18,0.62));
+    border: 1px solid rgba(255,255,255,0.04);
+  }
+  .pricing-page .card{ background: var(--panel); border-color: rgba(255,255,255,0.06); box-shadow:none; }
+  .pricing-page .pricing-table thead th{ background: linear-gradient(90deg,#3b31a5,#0ea5a4); }
+  .pricing-page .pricing-table tbody td{ color: var(--text); background: rgba(10,14,22,0.48); }
+  .pricing-page .pricing-table tbody tr:nth-child(even) td{ background: rgba(12,16,28,0.52); }
+  .pricing-page .price{ color: var(--brand-400); }
+}

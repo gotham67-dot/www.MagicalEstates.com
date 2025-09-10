@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Branches | Magical Estate</title>
+  <meta name="description" content="Magical Estate — Branch offices across Kenya" />
+
+  <!-- Global theme (homepage styles) -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Branches page specific CSS -->
+  <link rel="stylesheet" href="branches.css" />
+</head>
+<body class="branches-page">
+  <!-- Header (same as homepage) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Magical Estate home">
+        <span class="logo-mark">🏡</span>
+        <span class="logo-type">Magical<span>Estate</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <ul class="tabs">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a class="active" href="branches.html">Branches</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page hero -->
+    <section class="section-header" style="padding-top:36px;">
+      <div class="container center">
+        <h1>Our Branches — Kenya</h1>
+        <p class="lead">Major cities, local teams. Click a branch card to center the map, view details or contact the local office.</p>
+      </div>
+    </section>
+
+    <section class="container branches-stage">
+      <!-- Controls row -->
+      <div class="controls-row">
+        <div class="control-left">
+          <label for="branchSearch" class="sr-only">Search branches</label>
+          <div class="input-group" style="min-width:320px;">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <input id="branchSearch" type="text" placeholder="Search city or branch name…" />
+          </div>
+        </div>
+
+        <div class="control-right">
+          <div class="chips" role="tablist">
+            <button class="chip active" data-filter="all">All</button>
+            <button class="chip" data-filter="nairobi">Nairobi</button>
+            <button class="chip" data-filter="mombasa">Mombasa</button>
+            <button class="chip" data-filter="kisumu">Kisumu</button>
+            <button class="chip" data-filter="nakuru">Nakuru</button>
+            <button class="chip" data-filter="eldoret">Eldoret</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Split layout: map + cards -->
+      <div class="branches-grid-layout">
+        <!-- left: map card -->
+        <aside class="map-card">
+          <div class="map-header">
+            <h3>Branch map</h3>
+            <p class="muted small" id="map-selected">Selected: All branches</p>
+          </div>
+
+          <div class="map-frame">
+            <iframe id="branchMap" title="Branches map" src="https://www.google.com/maps?q=Kenya&output=embed" loading="lazy"></iframe>
+          </div>
+
+          <div class="map-actions">
+            <a class="btn btn-primary" href="https://www.google.com/maps?q=Kenya" target="_blank" rel="noopener">Open full map</a>
+          </div>
+
+          <!-- MAP EXTRAS — subtle content below the map to occupy space -->
+          <div class="map-extras" aria-label="Map extras and nearby highlights">
+            <div class="nearby-cards" role="region" aria-label="Nearby areas">
+              <div class="nearby-item" tabindex="0" data-query="Westlands, Nairobi">
+                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=600&auto=format&fit=crop" alt="Westlands thumbnail">
+                <div class="nearby-meta">
+                  <h4>Westlands</h4>
+                  <div class="muted small">8 listings • active</div>
+                </div>
+              </div>
+
+              <div class="nearby-item" tabindex="0" data-query="Karen, Nairobi">
+                <img src="https://images.unsplash.com/photo-1505691723518-36a0d6eb0f13?q=80&w=600&auto=format&fit=crop" alt="Karen thumbnail">
+                <div class="nearby-meta">
+                  <h4>Karen</h4>
+                  <div class="muted small">3 premium homes</div>
+                </div>
+              </div>
+
+              <div class="nearby-item" tabindex="0" data-query="Ruiru, Kenya">
+                <img src="https://images.unsplash.com/photo-1549399599-07d2b37486b6?q=80&w=600&auto=format&fit=crop" alt="Ruiru thumbnail">
+                <div class="nearby-meta">
+                  <h4>Ruiru</h4>
+                  <div class="muted small">Growth corridor</div>
+                </div>
+              </div>
+
+              <div class="nearby-item" tabindex="0" data-query="Kilimani, Nairobi">
+                <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=80&w=600&auto=format&fit=crop" alt="Kilimani thumbnail">
+                <div class="nearby-meta">
+                  <h4>Kilimani</h4>
+                  <div class="muted small">Units from KSh 4M</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="map-note" role="complementary" aria-label="Quick map tip and contact">
+              <h4>Quick tip</h4>
+              <p class="muted small">Click any branch card to centre the map on that office, or open the full map to explore neighbourhood pins.</p>
+              <div style="display:flex; gap:8px; margin-top:8px;">
+                <a class="btn btn-outline" href="contact.html">Contact nearest branch</a>
+                <a class="btn btn-primary" href="pricing.html">Request a valuation</a>
+              </div>
+            </div>
+          </div>
+          <!-- /map-extras -->
+        </aside>
+
+        <!-- right: cards -->
+        <section class="cards-column">
+          <div class="cards-toolbar">
+            <div class="stats">
+              <div class="stat pill"><strong>5</strong><span>Branches</span></div>
+              <div class="stat pill"><strong>120+</strong><span>Listings</span></div>
+              <div class="stat pill"><strong>45</strong><span>Agents</span></div>
+            </div>
+          </div>
+
+          <div id="branchesGrid" class="cards-grid">
+            <!-- Card: Nairobi (head office) -->
+            <article class="property-card branch-card" data-city="nairobi" data-map="Riverside Drive, Landmark Tower, Nairobi">
+              <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop" alt="Nairobi office image">
+              <div class="pc-body">
+                <h3>Nairobi — Head Office <span class="badge small-badge">HQ</span></h3>
+                <p class="muted">Riverside Drive, Landmark Tower, 3rd Floor</p>
+
+                <ul class="checklist small">
+                  <li>📞 +254 711 000 111</li>
+                  <li>✉️ nairobi@magicalestate.co.ke</li>
+                  <li>Mon–Fri • 08:30–17:30</li>
+                </ul>
+
+                <div class="card-actions" style="margin-top:.6rem;">
+                  <button class="btn btn-primary view-on-map">View on map</button>
+                  <button class="btn btn-outline details-toggle">Details</button>
+                </div>
+
+                <div class="branch-extra" hidden>
+                  <p class="muted small" style="margin-top:.6rem;">Nairobi handles sales, premium listings, and investor relations. Local team available for private tours and valuations.</p>
+                  <a class="btn btn-outline" href="contact.html" style="margin-top:.6rem;">Contact branch</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: Mombasa -->
+            <article class="property-card branch-card" data-city="mombasa" data-map="Nyali, Mombasa">
+              <img src="images/8.jpg" alt="Mombasa office">
+              <div class="pc-body">
+                <h3>Mombasa <span class="badge small-badge">Coastal</span></h3>
+                <p class="muted">Nyali — Beachfront area</p>
+
+                <ul class="checklist small">
+                  <li>📞 +254 711 000 333</li>
+                  <li>✉️ mombasa@magicalestate.co.ke</li>
+                  <li>Mon–Fri • 09:00–17:00</li>
+                </ul>
+
+                <div class="card-actions" style="margin-top:.6rem;">
+                  <button class="btn btn-primary view-on-map">View on map</button>
+                  <button class="btn btn-outline details-toggle">Details</button>
+                </div>
+
+                <div class="branch-extra" hidden>
+                  <p class="muted small" style="margin-top:.6rem;">Coastal specialists for holiday homes and rentals.</p>
+                  <a class="btn btn-outline" href="contact.html" style="margin-top:.6rem;">Contact branch</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: Kisumu -->
+            <article class="property-card branch-card" data-city="kisumu" data-map="Lake Road, Kisumu">
+              <img src="images/2.jpg" alt="Kisumu office">
+              <div class="pc-body">
+                <h3>Kisumu <span class="badge small-badge">Lakeview</span></h3>
+                <p class="muted">Lake Road, Kisumu</p>
+
+                <ul class="checklist small">
+                  <li>📞 +254 711 000 222</li>
+                  <li>✉️ kisumu@magicalestate.co.ke</li>
+                  <li>Mon–Fri • 08:30–16:30</li>
+                </ul>
+
+                <div class="card-actions" style="margin-top:.6rem;">
+                  <button class="btn btn-primary view-on-map">View on map</button>
+                  <button class="btn btn-outline details-toggle">Details</button>
+                </div>
+
+                <div class="branch-extra" hidden>
+                  <p class="muted small" style="margin-top:.6rem;">Lake-region specialists — enquiries for family homes and plots.</p>
+                  <a class="btn btn-outline" href="contact.html" style="margin-top:.6rem;">Contact branch</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: Nakuru -->
+            <article class="property-card branch-card" data-city="nakuru" data-map="Kenyatta Avenue, Nakuru">
+              <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=80&w=1200&auto=format&fit=crop" alt="Nakuru office">
+              <div class="pc-body">
+                <h3>Nakuru <span class="badge small-badge">Regional</span></h3>
+                <p class="muted">Kenyatta Avenue, Nakuru</p>
+
+                <ul class="checklist small">
+                  <li>📞 +254 711 000 444</li>
+                  <li>✉️ nakuru@magicalestate.co.ke</li>
+                  <li>Mon–Fri • 08:30–17:00</li>
+                </ul>
+
+                <div class="card-actions" style="margin-top:.6rem;">
+                  <button class="btn btn-primary view-on-map">View on map</button>
+                  <button class="btn btn-outline details-toggle">Details</button>
+                </div>
+
+                <div class="branch-extra" hidden>
+                  <p class="muted small" style="margin-top:.6rem;">Regional office with suburban listings and small developments.</p>
+                  <a class="btn btn-outline" href="contact.html" style="margin-top:.6rem;">Contact branch</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card: Eldoret -->
+            <article class="property-card branch-card" data-city="eldoret" data-map="Moi Avenue, Eldoret">
+              <img src="https://images.unsplash.com/photo-1472224371017-08207f84aaae?q=80&w=1200&auto=format&fit=crop" alt="Eldoret office">
+              <div class="pc-body">
+                <h3>Eldoret <span class="badge small-badge">Highlands</span></h3>
+                <p class="muted">Moi Avenue, Eldoret</p>
+
+                <ul class="checklist small">
+                  <li>📞 +254 711 000 555</li>
+                  <li>✉️ eldoret@magicalestate.co.ke</li>
+                  <li>Mon–Fri • 08:30–17:00</li>
+                </ul>
+
+                <div class="card-actions" style="margin-top:.6rem;">
+                  <button class="btn btn-primary view-on-map">View on map</button>
+                  <button class="btn btn-outline details-toggle">Details</button>
+                </div>
+
+                <div class="branch-extra" hidden>
+                  <p class="muted small" style="margin-top:.6rem;">Highlands office — developers & agricultural land enquiries.</p>
+                  <a class="btn btn-outline" href="contact.html" style="margin-top:.6rem;">Contact branch</a>
+                </div>
+              </div>
+            </article>
+
+          </div> <!-- /cards-grid -->
+        </section>
+      </div> <!-- /branches-grid-layout -->
+    </section>
+
+    <!-- Local Highlights -->
+    <section class="local-highlights container" aria-labelledby="local-highlights-title">
+      <div class="section-header">
+        <h2 id="local-highlights-title">Local highlights</h2>
+        <p class="lead">Quick wins and local stories from our branches — featured property, market snapshot and an easy contact card.</p>
+      </div>
+
+      <div class="lh-grid">
+        <!-- Featured listing -->
+        <article class="highlight-card featured-listing fade-up" aria-labelledby="feat-title">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1600&auto=format&fit=crop" alt="Featured property" />
+          <div class="lh-body">
+            <h3 id="feat-title">Muthaiga Manor — Mansionette</h3>
+            <div class="price">KSh 28,500,000 <span class="muted small">guide</span></div>
+            <ul class="checklist">
+              <li>5 bedrooms • 6 bathrooms</li>
+              <li>Swimming pool • SQ • Home gym</li>
+              <li>Large garden • Double garage</li>
+            </ul>
+            <div class="lh-actions">
+              <a class="btn btn-primary" href="gallery.html">View listing</a>
+              <a class="btn btn-outline" href="contact.html">Arrange viewing</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Market snapshot -->
+        <article class="highlight-card market-snapshot fade-up" aria-labelledby="market-title">
+          <div class="lh-body">
+            <h3 id="market-title">Market snapshot — Nairobi</h3>
+            <p class="muted small">Fresh numbers to help local decisions (updated weekly)</p>
+
+            <div class="stat-grid">
+              <div class="mini-stat">
+                <strong>+6.8%</strong>
+                <span class="muted small">YoY price</span>
+              </div>
+              <div class="mini-stat">
+                <strong>5.4%</strong>
+                <span class="muted small">Avg yield</span>
+              </div>
+              <div class="mini-stat">
+                <strong>120+</strong>
+                <span class="muted small">Active listings</span>
+              </div>
+            </div>
+
+            <p style="margin-top:10px;" class="muted small">Need a local market report tailored to a neighbourhood? Get a free snapshot from our Nairobi team.</p>
+            <div class="lh-actions">
+              <a class="btn btn-outline" href="pricing.html">Download report</a>
+              <a class="btn btn-primary" href="contact.html">Request snapshot</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Branch offer / contact -->
+        <article class="highlight-card branch-offer fade-up" aria-labelledby="offer-title">
+          <div class="lh-body">
+            <h3 id="offer-title">Speak with your local agent</h3>
+            <p class="muted small">Quick contact to get local listings, valuations or an urgent viewing.</p>
+
+            <div class="contact-row">
+              <div class="contact-line"><strong>📞</strong> <a href="tel:+254711000111">+254 711 000 111</a></div>
+              <div class="contact-line"><strong>✉️</strong> <a href="mailto:info@magicalestate.co.ke">info@magicalestate.co.ke</a></div>
+            </div>
+
+            <form class="mini-contact" action="#" method="post" aria-label="Request contact from local agent">
+              <input name="name" type="text" placeholder="Your name" required>
+              <input name="phone" type="tel" placeholder="Phone or WhatsApp" required>
+              <button type="submit" class="btn btn-primary">Request call</button>
+            </form>
+
+            <p class="muted small" style="margin-top:8px;">Or click a branch card to view local details and map location.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- /Local Highlights -->
+
+  </main>
+
+  <!-- Footer (keeps same footer used site-wide) -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo" href="index.html">🏡 Magical<span>Estate</span></a>
+        <p style="margin:.6rem 0 0; color:var(--muted);">© <span id="year"></span> Magical Estate</p>
+      </div>
+      <div class="footer-links">
+        <a href="pricing.html">Pricing</a>
+        <a href="branches.html">Branches</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-links">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // small page script: map update, filter, details toggle, nearby clicks
+    (function(){
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const grid = document.getElementById('branchesGrid');
+      const cards = Array.from(grid.querySelectorAll('.branch-card'));
+      const search = document.getElementById('branchSearch');
+      const chips = Array.from(document.querySelectorAll('.chip'));
+      const map = document.getElementById('branchMap');
+
+      function setMap(query, label){
+        map.src = 'https://www.google.com/maps?q=' + encodeURIComponent(query) + '&output=embed';
+        const labelNode = document.getElementById('map-selected');
+        if(labelNode) labelNode.textContent = 'Selected: ' + (label || query);
+      }
+
+      // card actions (delegation)
+      grid.addEventListener('click', (e) => {
+        const view = e.target.closest('.view-on-map');
+        if (view) {
+          const card = view.closest('.branch-card');
+          setMap(card.dataset.map || 'Kenya', card.querySelector('h3')?.innerText);
+          card.scrollIntoView({behavior:'smooth', block:'center'});
+          return;
+        }
+
+        const det = e.target.closest('.details-toggle');
+        if (det) {
+          const card = det.closest('.branch-card');
+          const details = card.querySelector('.branch-extra');
+          details.hidden = !details.hidden;
+          return;
+        }
+      });
+
+      // keyboard accessibility: Enter to view map
+      cards.forEach(card => {
+        card.addEventListener('keydown', (ev) => {
+          if (ev.key === 'Enter') {
+            setMap(card.dataset.map || 'Kenya', card.querySelector('h3')?.innerText);
+          }
+        });
+        card.tabIndex = 0;
+      });
+
+      // filtering chips
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          chips.forEach(c => c.classList.remove('active'));
+          chip.classList.add('active');
+          applyFilter();
+        });
+      });
+
+      function applyFilter() {
+        const active = document.querySelector('.chip.active')?.dataset.filter || 'all';
+        const q = (search.value || '').trim().toLowerCase();
+        cards.forEach(card => {
+          const city = (card.dataset.city || '').toLowerCase();
+          const text = card.textContent.toLowerCase();
+          const matchesFilter = active === 'all' || city === active;
+          const matchesQuery = q === '' || text.includes(q);
+          card.style.display = (matchesFilter && matchesQuery) ? '' : 'none';
+        });
+      }
+
+      search.addEventListener('input', applyFilter);
+      applyFilter();
+
+      // nearby items (map extras) -> center map when clicked
+      const nearby = Array.from(document.querySelectorAll('.nearby-item'));
+      nearby.forEach(item => {
+        item.addEventListener('click', () => {
+          const q = item.dataset.query || item.textContent.trim();
+          setMap(q, item.querySelector('h4')?.innerText || q);
+        });
+        item.addEventListener('keydown', (ev) => {
+          if (ev.key === 'Enter') item.click();
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

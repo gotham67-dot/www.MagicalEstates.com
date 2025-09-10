@@ -1,0 +1,117 @@
+/* contact.css — cleaned and fixed
+   Uses your global CSS variables (do NOT change styles.css).
+   Focus: consistent panels, fixed map layout, readable inputs, responsive stacking.
+*/
+
+.contact-page { color: var(--text); font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; }
+
+/* visually-hidden for accessibility */
+.sr-only { position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+
+/* spacing */
+.contact-stage { padding: 36px 0 72px; }
+
+/* Quick action cards (centered) */
+.quick-actions { display:flex; justify-content:center; gap:14px; margin-bottom:20px; flex-wrap:wrap; }
+.qa-card {
+  display:flex; flex-direction:column; align-items:center; gap:6px; min-width:220px;
+  text-decoration:none;
+  background: var(--panel); color: var(--text);
+  border-radius: var(--radius-lg); padding:12px 16px;
+  border:1px solid rgba(20,22,42,0.06); box-shadow: var(--shadow-1);
+  transition: transform .14s ease, box-shadow .14s ease;
+}
+.qa-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-2); }
+.qa-emoji { font-size:20px; }
+.qa-label { font-weight:800; }
+.qa-value { color: var(--muted); font-weight:700; }
+
+/* CONTACT BOX GRID */
+.contact-box { display:grid; grid-template-columns: 1fr 360px; gap:22px; max-width:1100px; margin:0 auto; align-items:start; }
+
+/* Panel base style (reused) */
+.contact-panel { background: var(--panel); color: var(--text); border-radius: var(--radius-xl); padding:18px; border:1px solid rgba(20,22,42,0.06); box-shadow: var(--shadow-2); }
+
+/* LEFT: form */
+.contact-left { display:flex; flex-direction:column; gap:14px; }
+.panel-header h3 { margin:0; font-size:1.05rem; font-weight:900; color:var(--text); }
+.panel-header .muted { color: var(--muted); font-weight:700; }
+
+/* form layout */
+.contact-form { display:flex; flex-direction:column; gap:12px; }
+.row { display:flex; gap:12px; }
+.row.two { flex-wrap:wrap; }
+.field { display:flex; flex-direction:column; gap:8px; flex:1; min-width:0; }
+.field-label { font-weight:700; color:var(--text); font-size:0.9rem; }
+
+/* input with icon */
+.input-wrap { position:relative; display:flex; align-items:center; }
+.field-icon { position:absolute; left:10px; width:18px; height:18px; color:var(--brand-600); opacity:.95; pointer-events:none; }
+.input-wrap input,
+.input-wrap select,
+.input-wrap textarea {
+  width:100%; padding:10px 12px 10px 38px; border-radius:10px; border:1px solid rgba(20,22,42,0.06);
+  background: rgba(255,255,255,0.98); color: var(--text); font-size:0.95rem; box-shadow: 0 8px 30px rgba(6,16,40,0.04);
+}
+.input-wrap textarea { min-height:120px; resize:vertical; padding-top:12px; padding-bottom:12px; }
+
+/* schedule row */
+.row.schedule { display:flex; gap:10px; align-items:end; flex-wrap:wrap; }
+.field.mini { min-width:120px; }
+
+/* actions */
+.row.actions { align-items:center; gap:12px; flex-wrap:wrap; }
+.btn-primary, .btn-primary:visited { background: linear-gradient(90deg, var(--brand-600), var(--brand-400)); color:#fff; padding:10px 16px; border-radius:10px; border:none; font-weight:800; cursor:pointer; box-shadow: 0 12px 36px rgba(79,70,229,0.12); }
+.btn-outline, .btn-outline:visited { background:transparent; border:1px solid rgba(20,22,42,0.06); color:var(--text); padding:9px 14px; border-radius:10px; font-weight:700; }
+
+/* form status */
+.form-status { color:var(--muted); font-weight:700; min-height:1.2em; }
+
+/* RIGHT: contact details */
+.contact-right { display:flex; flex-direction:column; gap:12px; }
+
+/* agent card */
+.agent-card { display:flex; gap:12px; align-items:center; padding:10px; border-radius:12px; background:var(--panel); border:1px solid rgba(20,22,42,0.06); box-shadow: var(--shadow-1); }
+.agent-card img { width:84px; height:84px; object-fit:cover; border-radius:10px; }
+.agent-info { display:flex; flex-direction:column; gap:8px; }
+.agent-name { font-weight:900; color:var(--text); }
+.agent-role { color:var(--muted); font-weight:700; }
+.agent-contact { color:var(--brand-600); text-decoration:none; font-weight:800; }
+
+/* branches list */
+.branches h4 { margin:0 0 8px; font-weight:800; color:var(--text); }
+.branches ul { list-style:none; padding:0; margin:0; color:var(--muted); }
+
+/* map - uses aspect-ratio to avoid overflow under it */
+.iframe-container { width:100%; aspect-ratio: 16/9; overflow:hidden; border-radius:10px; border:1px solid rgba(20,22,42,0.06); }
+.iframe-container iframe { width:100%; height:100%; border:0; display:block; }
+
+/* socials */
+.socials { display:flex; gap:8px; }
+.social { width:36px; height:36px; display:inline-grid; place-items:center; border-radius:999px; background:var(--panel); border:1px solid rgba(20,22,42,0.06); color:var(--text); text-decoration:none; font-weight:800; }
+
+/* success modal */
+.success-modal { display:none; position:fixed; inset:0; align-items:center; justify-content:center; background: rgba(6,10,16,0.5); z-index:2500; }
+.success-modal[aria-hidden="false"] { display:flex; }
+.success-card { width:min(480px,92%); background:var(--panel); color:var(--text); border-radius:14px; padding:22px; border:1px solid rgba(20,22,42,0.06); box-shadow: 0 40px 80px rgba(6,10,16,0.4); text-align:center; }
+.tick { width:64px; height:64px; border-radius:999px; display:grid; place-items:center; margin:0 auto 12px; font-size:28px; color:#fff; background: linear-gradient(90deg, var(--mint-500), var(--brand-600)); font-weight:900; }
+
+/* helpers */
+.muted { color: var(--muted); }
+.full { display:block; width:100%; text-align:center; }
+
+/* focus */
+.input-wrap input:focus, .input-wrap textarea:focus, .input-wrap select:focus { outline:none; box-shadow: 0 0 0 .16rem rgba(108,99,255,0.12); border-color: var(--brand-500); }
+
+/* responsive */
+@media (max-width: 1100px) {
+  .contact-box { grid-template-columns: 1fr; }
+  .quick-actions { gap:12px; flex-direction:column; align-items:center; }
+  .contact-stage { padding:24px 0 48px; }
+}
+
+/* dark mode: rely on homepage tokens; tweak borders for legibility */
+@media (prefers-color-scheme: dark) {
+  .contact-panel, .qa-card, .agent-card, .branches, .success-card { background: var(--panel); color: var(--text); border-color: rgba(255,255,255,0.06); box-shadow: none; }
+  .input-wrap input, .input-wrap textarea, .input-wrap select { background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); color:var(--text); box-shadow:none; }
+}
